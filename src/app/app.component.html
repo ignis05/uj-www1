@@ -1,1 +1,6 @@
-<p>Main component works</p>
+<ul ngbNav [activeId]="currentUrl" class="nav-tabs">
+	<li [ngbNavItem]="link.url" *ngFor="let link of navLinks">
+		<a ngbNavLink [routerLink]="link.url">{{ link.title }}</a>
+	</li>
+</ul>
+<router-outlet></router-outlet>

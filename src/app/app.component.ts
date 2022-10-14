@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
 	selector: 'app-root',
@@ -6,5 +7,16 @@ import { Component } from '@angular/core'
 	styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-	title = 'uj-www1'
+	currentUrl: string = ''
+	navLinks = [
+		{ title: 'Main Page', url: '/' },
+		{ title: 'Subpage 1', url: 'subpage1' },
+		{ title: 'Subpage 2', url: 'subpage2' },
+	]
+
+	constructor(public route: ActivatedRoute) {
+		this.route.url.subscribe((activeUrl) => {
+			this.currentUrl = window.location.pathname
+		})
+	}
 }
