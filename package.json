@@ -2,10 +2,11 @@
 	"name": "uj-www1",
 	"version": "0.0.0",
 	"scripts": {
-		"start": "ng serve",
+		"start": "ng serve --serve-path uj-www1",
 		"build": "ng build",
 		"watch": "ng build --watch --configuration development",
-		"test": "ng test"
+		"test": "ng test",
+		"deploy":"sh ./deploy-gh-pages.sh"
 	},
 	"private": true,
 	"dependencies": {

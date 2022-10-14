@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
-import { MainScreenComponent } from '../main-screen/main-screen.component'
-import { Subpage1ScreenComponent } from '../subpage1-screen/subpage1-screen.component'
-import { Subpage2ScreenComponent } from '../subpage2-screen/subpage2-screen.component'
+import { MainScreenComponent } from '../components/main-screen/main-screen.component'
+import { Subpage1ScreenComponent } from '../components/subpage1-screen/subpage1-screen.component'
+import { Subpage2ScreenComponent } from '../components/subpage2-screen/subpage2-screen.component'
 
 const routes: Routes = [
 	{ path: '', component: MainScreenComponent, pathMatch: 'full' },
