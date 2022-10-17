@@ -1,5 +1,6 @@
 import { Component } from '@angular/core'
 import { ActivatedRoute } from '@angular/router'
+import { ThemeService } from './services/theme.service'
 
 @Component({
 	selector: 'app-root',
@@ -14,9 +15,13 @@ export class AppComponent {
 		{ title: 'Subpage 2', url: 'subpage2' },
 	]
 
-	constructor(public route: ActivatedRoute) {
+	constructor(public route: ActivatedRoute, private theme: ThemeService) {
 		this.route.url.subscribe((activeUrl) => {
 			this.currentUrl = window.location.pathname
 		})
+	}
+
+	switchTheme(): void {
+		this.theme.toggle()
 	}
 }
