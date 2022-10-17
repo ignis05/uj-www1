@@ -1,9 +1,12 @@
-<ul ngbNav [activeId]="currentUrl" class="nav-tabs">
-	<li [ngbNavItem]="link.url" *ngFor="let link of navLinks">
-		<a ngbNavLink [routerLink]="link.url">{{ link.title }}</a>
-	</li>
-</ul>
-<div>
-	<button (click)="switchTheme()">Switch theme</button>
-</div>
+<header>
+	<ul ngbNav [activeId]="this.router.url" class="nav-pills">
+		<li [ngbNavItem]="link.url" *ngFor="let link of navLinks">
+			<a ngbNavLink [routerLink]="link.url">{{ link.title }}</a>
+		</li>
+		<li></li>
+	</ul>
+	<!-- <div class="spacer"></div> -->
+	<button class="btn" (click)="switchTheme()"><span class="material-symbols-outlined"> dark_mode </span></button>
+</header>
+
 <router-outlet></router-outlet>

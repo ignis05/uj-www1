@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { ActivatedRoute } from '@angular/router'
+import { Router } from '@angular/router'
 import { ThemeService } from './services/theme.service'
 
 @Component({
@@ -11,15 +11,11 @@ export class AppComponent {
 	currentUrl: string = ''
 	navLinks = [
 		{ title: 'Main Page', url: '/' },
-		{ title: 'Subpage 1', url: 'subpage1' },
-		{ title: 'Subpage 2', url: 'subpage2' },
+		{ title: 'Subpage 1', url: '/subpage1' },
+		{ title: 'Subpage 2', url: '/subpage2' },
 	]
 
-	constructor(public route: ActivatedRoute, private theme: ThemeService) {
-		this.route.url.subscribe((activeUrl) => {
-			this.currentUrl = window.location.pathname
-		})
-	}
+	constructor(public router: Router, private theme: ThemeService) {}
 
 	switchTheme(): void {
 		this.theme.toggle()

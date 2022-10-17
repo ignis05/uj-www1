@@ -12,18 +12,17 @@ export class ThemeService {
 	constructor() {
 		this.style = document.createElement('link')
 		this.style.rel = 'stylesheet'
-		document.head.appendChild(this.style)
+		this.style.href = `/uj-www1/${this.current}.css`
 
-		if (localStorage.getItem('theme') !== undefined) {
-			this.style.href = `/uj-www1/${this.current}.css`
-		}
+		document.head.appendChild(this.style)
 	}
 
 	get current(): string {
-		return localStorage.getItem('theme') ?? ThemeService.default
+		return localStorage.getItem('theme') || ThemeService.default
 	}
 
 	set current(value: string) {
+		console.log(`Setting theme to: ${value}`)
 		localStorage.setItem('theme', value)
 		this.style.href = `/uj-www1/${value}.css`
 	}

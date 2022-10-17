@@ -1,4 +1,17 @@
+header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 3px;
+}
+
 ul {
 	padding-left: 10px;
 	margin-bottom: 10px;
+	flex-grow: 1;
+}
+
+.spacer {
+	flex: 1 1;
 }
