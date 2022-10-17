@@ -12,7 +12,7 @@ export class ThemeService {
 	constructor() {
 		this.style = document.createElement('link')
 		this.style.rel = 'stylesheet'
-		this.style.href = `/uj-www1/${this.current}.css`
+		this.style.href = `./${this.current}.css`
 
 		document.head.appendChild(this.style)
 	}
@@ -24,7 +24,7 @@ export class ThemeService {
 	set current(value: string) {
 		console.log(`Setting theme to: ${value}`)
 		localStorage.setItem('theme', value)
-		this.style.href = `/uj-www1/${value}.css`
+		this.style.href = `./${value}.css`
 	}
 
 	toggle() {
