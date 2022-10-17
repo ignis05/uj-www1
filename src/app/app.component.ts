@@ -1,6 +1,5 @@
 import { Component } from '@angular/core'
 import { Router } from '@angular/router'
-import { ThemeService } from './services/theme.service'
 
 @Component({
 	selector: 'app-root',
@@ -15,9 +14,5 @@ export class AppComponent {
 		{ title: 'Subpage 2', url: '/subpage2' },
 	]
 
-	constructor(public router: Router, private theme: ThemeService) {}
-
-	switchTheme(): void {
-		this.theme.toggle()
-	}
+	constructor(public router: Router) {}
 }

@@ -6,10 +6,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './modules/app-routing.module';
 import { MainScreenComponent } from './components/main-screen/main-screen.component';
 import { Subpage1ScreenComponent } from './components/subpage1-screen/subpage1-screen.component';
-import { Subpage2ScreenComponent } from './components/subpage2-screen/subpage2-screen.component'
+import { Subpage2ScreenComponent } from './components/subpage2-screen/subpage2-screen.component';
+import { ThemeSwitcherComponent } from './components/theme-switcher/theme-switcher.component'
 
 @NgModule({
-	declarations: [AppComponent, MainScreenComponent, Subpage1ScreenComponent, Subpage2ScreenComponent],
+	declarations: [AppComponent, MainScreenComponent, Subpage1ScreenComponent, Subpage2ScreenComponent, ThemeSwitcherComponent],
 	imports: [BrowserModule, NgbModule, AppRoutingModule],
 	providers: [],
 	bootstrap: [AppComponent],
