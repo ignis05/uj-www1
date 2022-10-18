@@ -1,6 +1,8 @@
 .cell {
-	background-color: #aaa;
-	border: 1px solid black;
+	margin: 10px;
+	border: 1px solid var(--body-border-color);
+	background-color: var(--body-bg-color);
+	padding: 10px;
 }
 
 img {

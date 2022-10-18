@@ -4,6 +4,12 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 3px;
+	padding-top: 8px;
+	background-color: var(--bs-green);
+}
+
+header .nav-link {
+	color: white;
 }
 
 ul {

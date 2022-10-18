@@ -1,3 +1,10 @@
 article {
-	margin-top: 20px;
+	margin: 10px;
+	border: 1px solid var(--body-border-color);
+	background-color: var(--body-bg-color);
+	padding: 10px;
+}
+
+.rowDiv {
+	justify-content: space-evenly;
 }

@@ -1,7 +1,7 @@
-<header>
+<header class="shadow">
 	<ul ngbNav [activeId]="this.router.url" class="nav-pills">
 		<li [ngbNavItem]="link.url" *ngFor="let link of navLinks">
-			<a ngbNavLink [routerLink]="link.url">{{ link.title }}</a>
+			<a ngbNavLink class="link" [routerLink]="link.url">{{ link.title }}</a>
 		</li>
 	</ul>
 	<app-theme-switcher></app-theme-switcher>
