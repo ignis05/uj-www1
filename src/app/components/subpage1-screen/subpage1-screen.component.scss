@@ -1,9 +1,10 @@
-article {
+.article {
 	min-width: 200px;
 	margin: 5px;
 	border: 1px solid var(--body-border-color);
 	background-color: var(--body-bg-color);
 	padding: 10px;
+	flex: 1 1 auto !important;
 }
 
 .rowDiv {
